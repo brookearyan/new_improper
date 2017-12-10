@@ -69,6 +69,7 @@
 
 __webpack_require__(1);
 document.write(__webpack_require__(6));
+document.write(__webpack_require__(7));
 
 
 /***/ }),
@@ -671,6 +672,12 @@ module.exports = function (css) {
 
 module.exports = "It works from content.js.";
 
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+throw new Error("Module parse failed: Unexpected token (49:6)\nYou may need an appropriate loader to handle this file type.\n|   render() {\n|     return (\n|       <div className=\"App\">\n|         <header className=\"App-header\">\n|           <h1 className=\"App-title\">Welcome to Improper Nouns</h1>");
 
 /***/ })
 /******/ ]);
