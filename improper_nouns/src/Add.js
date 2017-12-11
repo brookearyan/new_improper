@@ -6,21 +6,21 @@ import { createMeme } from './actions/memes';
 
 class Add extends Component {
 
-  handleOnChange = event => {
-    const { name, value } = event.target;
-    const currentMemeFormData = Object.assign({}, this.props.memeFormData, {
-      [name]: value
-    })
-    this.props.updateMemeFormData(currentMemeFormData)
-  }
-
-  handleOnSubmit = event => {
-    event.preventDefault()
-    this.props.createMeme(this.props.memeFormData)
-  }
+  // handleOnChange = event => {
+  //   const { name, value } = event.target;
+  //   const currentMemeFormData = Object.assign({}, this.props.memeFormData, {
+  //     [name]: value
+  //   })
+  //   this.props.updateMemeFormData(currentMemeFormData)
+  // }
+  //
+  // handleOnSubmit = event => {
+  //   event.preventDefault()
+  //   this.props.createMeme(this.props.memeFormData)
+  // }
 
   render() {
-    const { alias, one, two, three, four, five } = this.props.memeFormData;
+    // const { alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
       <div>
@@ -32,7 +32,7 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="alias"
-              value={alias}
+              // value={alias}
             />
           </div>
           <div>
@@ -41,7 +41,7 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="one"
-              value={one}
+              // value={one}
             />
           </div>
           <div>
@@ -50,7 +50,7 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="two"
-              value={two}
+              // value={two}
             />
           </div>
           <div>
@@ -59,7 +59,7 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="three"
-              value={three}
+              // value={three}
             />
           </div>
           <div>
@@ -68,7 +68,7 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="four"
-              value={four}
+              // value={four}
             />
           </div>
           <div>
@@ -77,23 +77,24 @@ class Add extends Component {
               type="text"
               onChange={this.handleOnChange}
               name="five"
-              value={five}
+              // value={five}
             />
           </div>
-           <button type="submit">Add Board</button>
+           <button type="submit">share</button>
         </form>
       </div>
     )
   }
 }
-
-const mapStateToProps = state => {
-  return {
-    memeFormData: state.memeFormData
-  }
-}
-
-export default connect(mapStateToProps, {
-  updateMemeFormData,
-  createMeme
-})(Add);
+//
+// const mapStateToProps = state => {
+//   return {
+//     memeFormData: state.memeFormData
+//   }
+// }
+//
+// export default connect(mapStateToProps, {
+//   updateMemeFormData,
+//   createMeme
+// })(Add);
+export default Add;
