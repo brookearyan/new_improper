@@ -2,8 +2,6 @@ import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import Memes from './Memes';
 import MemeForm from './MemeForm';
-import View from './View';
-
 
 import Modal from './Modal';
 import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
@@ -37,6 +35,7 @@ toggleModal = () => {
         </header>
         <div className="daily-feed">
           <Memes />
+
         </div>
       </div>
     );

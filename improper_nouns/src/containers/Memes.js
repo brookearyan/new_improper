@@ -2,48 +2,46 @@
 
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route, Router } from 'react-router-dom';
+import { Route, Router, Switch } from 'react-router-dom';
 
 import View from './View';
 import MemeForm from './MemeForm';
+// import Meme from '../Meme';
 import { getMemes } from '../actions/memes';
 
-const MemeList = (props) =>
-  (
-    <section className="clearfix">
-     <h2>daily feed</h2>
-      {props.memes.map(meme =>
-        <article key={meme.id}>
-          <h3>by, {meme.alias}</h3>
-          <p>{meme.one}</p>
-          <p>{meme.two}</p>
-          <p>{meme.three}</p>
-          <p>{meme.four}</p>
-          <p>{meme.five}</p>
-        </article>
-      )}
-     </section>
-  );
 
 class Memes extends Component {
 
-  componentDidMount() {
+  constructor(props) {
+    super(props)
+    this.state = {
+      memes: []
+    }
+  }
+  componentDidMount(){
     this.props.getMemes()
   }
 
+  memeList = ({ meme }) => (
+    <article key={meme.id}>
+      <h3>by, {meme.alias}</h3>
+      <p>{meme.one}</p>
+      <p>{meme.two}</p>
+      <p>{meme.three}</p>
+      <p>{meme.four}</p>
+      <p>{meme.five}</p>
+    </article>
+  );
+
   render() {
     return (
-      <div>
-        <Router>
-          <Route exact path='/Feed' render={() => (
-            <div className="MemesContainer">
-              <h1>Memes</h1>
-              {this.props.memes.map(meme => <MemeList key={meme.id} meme={meme} />)}
-            </div>
-          )} />
-        </Router>
-      </div>
-    );
+      <div className="MemesContainer">
+        <h1>daily feed</h1>
+        {this.state.memes.map(meme => {
+        <memeList key={meme.id} meme={meme}/>
+        })
+      }
+    </div>);
   }
 }
 

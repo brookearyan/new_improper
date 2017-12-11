@@ -20,7 +20,7 @@ class MemeForm extends Component {
   }
 
   render() {
-    const { alias, one, two, three, four, five } = this.props.memeFormData;
+    const { id, alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
       <div>

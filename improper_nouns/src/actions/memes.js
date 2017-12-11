@@ -1,6 +1,6 @@
 import { resetMemeForm } from './memeForm';
 
-const API_URL = process.env.REACT_APP_API_URL;
+const API_URL = 'http://localhost:9393/api/v1';
 
 const setMemes = memes => {
   return {
@@ -30,9 +30,10 @@ export const createMeme = meme => {
     return fetch(`${API_URL}/memes`, {
       method: "POST",
       headers: {
-        'Content-Type': 'application/json'
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
       },
-      body: JSON.stringify({ meme: meme })
+      body: JSON.stringify(meme)
     })
       .then(response => response.json())
       .then(meme => {
