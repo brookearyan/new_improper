@@ -4,7 +4,7 @@ import './App.css';
 
 const Memes = (props) =>
   (
-    <section>
+    <section className="clearfix">
      <h2>daily feed</h2>
       {props.memes.map(meme =>
         <article>
