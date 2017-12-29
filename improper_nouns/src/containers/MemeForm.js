@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { updateMemeFormData } from '../actions/memeForm';
 import { createMeme } from '../actions/memes';
 
+//stateless Component
+
+//----maybe divide JSX & logic below
 class MemeForm extends Component {
 
   handleOnChange = event => {
@@ -27,7 +29,7 @@ class MemeForm extends Component {
         <p>share your current</p>
         <form onSubmit={this.handleOnSubmit}>
         <div>
-          <label htmlFor="alias">alias:</label><br />
+          <label htmlFor="alias">one-time alias:</label><br />
           <input
             type="text"
             onChange={this.handleOnChange}
@@ -35,7 +37,6 @@ class MemeForm extends Component {
             value={alias}
           />
         </div>
-        <br />
         <div>
           <label htmlFor="one">your five nouns...</label><br />
           <input

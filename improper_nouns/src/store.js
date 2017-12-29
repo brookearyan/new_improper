@@ -5,7 +5,6 @@ import {
   combineReducers
 } from 'redux';
 import thunk from 'redux-thunk';
-
 import memes from './reducers/memes';
 import memeFormData from './reducers/memeFormData';
 

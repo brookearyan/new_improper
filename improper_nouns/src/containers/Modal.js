@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+//stateless presentational Component
+//renders only JSX
+
 class Modal extends React.Component {
   render() {
     if(!this.props.show) {

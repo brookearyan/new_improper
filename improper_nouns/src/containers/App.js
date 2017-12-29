@@ -4,6 +4,10 @@ import MemeForm from './MemeForm';
 import Modal from './Modal';
 import '../App.css';
 
+// stateful parent Component that sets state
+
+//----maybe separate modal below
+//----
 
 class App extends Component {
   constructor(props) {
@@ -18,17 +22,12 @@ class App extends Component {
     });
   }
 
-  componentWillMount = () => {
-    let articleWidth = window.innerWidth/3;
-    return articleWidth;
-  }
-
   render() {
     return (
       <div className="App">
         <section className="topper">
           <header className="App-header">
-            <h1>Welcome to Improper Nouns</h1>
+            <h1 className="app-title">Welcome to Improper Nouns</h1>
             <button onClick={this.toggleModal}>
               +
             </button>

@@ -7,6 +7,9 @@
 }
 
 .topper {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
   padding: 15px;
   font-size: 30px;
   background-color: lightgrey;
@@ -22,6 +25,10 @@
   padding-top: 20px;
 }
 
+.app-title {
+  margin: 50px;
+}
+
 h1 {
   margin: 20px;
 }
@@ -30,18 +37,24 @@ button {
   font-size: 40px;
   height: 60px;
   width: 60px;
+  padding: 0px 7px 3px 7px;
+}
+
+p {
+  margin: 20px 0px 10px 0px;
 }
 
 .modal-content {
   font-size: 20px;
+
 }
 
 .modal div {
-
+  padding: 10px;
 }
 
 label {
-  font-size: 30px;
+  font-size: 25px;
   margin: 5px;
 }
 
@@ -71,7 +84,7 @@ article {
   height: auto;
   width: auto;
   padding: 10px;
-  margin: 20px;
+  margin-top: 20px;
 }
 
 .backdropStyle {
@@ -90,5 +103,5 @@ article {
   max-width: 500px;
   min-height: 300px;
   margin: 0 auto;
-  padding: 30px;
+  padding: 10px;
 };
