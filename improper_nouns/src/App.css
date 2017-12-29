@@ -8,7 +8,6 @@
 
 .topper {
   position: fixed;
-  z-index: -1;
   width: 100%;
   padding: 15px;
   font-size: 30px;
@@ -63,10 +62,10 @@ input {
 }
 
 section {
+
 }
 
 article {
-  z-index: -1;
   background: lightgrey;
   height: auto;
   width: 33%;
@@ -87,21 +86,16 @@ article {
   margin-top: 20px;
 }
 
-.backdropStyle {
-  position: 'fixed';
-  top: 0px;
-  bottom: 0px;
-  left: 0px;
-  right: 0px;
-  background-color: lightgrey;
-  padding: 50px;
-};
+.meme-container {
+  z-index: -1;
+}
 
-.modalStyle {
+.modal {
   background-color: #fff;
-  border-radius: 5;
+  border: 5px solid black;
   max-width: 500px;
   min-height: 300px;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 10px;
-};
+}
