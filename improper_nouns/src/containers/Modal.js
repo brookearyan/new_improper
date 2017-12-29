@@ -20,19 +20,9 @@ class Modal extends React.Component {
       padding: 50
     };
 
-    const modalStyle = {
-      backgroundColor: '#fff',
-      color: 'black',
-      borderRadius: 5,
-      maxWidth: 500,
-      minHeight: 300,
-      margin: '0 auto',
-      padding: 30
-    };
-
     return (
       <div className="backdrop" style={backdropStyle}>
-        <div className="modal" style={modalStyle}>
+        <div className="modal">
         <div className="close-button">
           <button onClick={this.props.onClose}>
             x

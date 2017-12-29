@@ -28,7 +28,7 @@ class App extends Component {
         <section>
           <section className="topper">
             <header className="App-header">
-              <h1 className="app-title">Welcome to Improper Nouns</h1>
+              <h1 className="app-title">welcome to improper nouns</h1>
               <button onClick={this.toggleModal}>
                 +
               </button>

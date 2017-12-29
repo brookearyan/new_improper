@@ -24,10 +24,13 @@
 .feed-title {
   font-size: 30px;
   padding-top: 20px;
+  font-weight: normal;
 }
 
 .app-title {
   margin: 50px;
+  font-weight: normal;
+
 }
 
 h1 {

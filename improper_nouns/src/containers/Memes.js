@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { getMemes } from '../actions/memes';
 
 const MemeList = ({ meme }) => (
-  <article key={meme.id}>
+  <article className="memes" key={meme.id}>
     <div>
       <h3>by, {meme.alias}</h3>
     </div>
