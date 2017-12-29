@@ -36,10 +36,10 @@ class Memes extends Component {
       return <MemeList key={meme.id} meme={meme}/>
     })
     return (
-      <div className="MemesContainer">
-        <h1 className="feed-title">daily feed</h1>
+      <div className="meme-container">
         {memes}
-    </div>);
+      </div>
+    );
   }
 }
 

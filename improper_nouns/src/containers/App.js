@@ -25,15 +25,21 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <section className="topper">
-          <header className="App-header">
-            <h1 className="app-title">Welcome to Improper Nouns</h1>
-            <button onClick={this.toggleModal}>
-              +
-            </button>
-          </header>
+        <section>
+          <section className="topper">
+            <header className="App-header">
+              <h1 className="app-title">Welcome to Improper Nouns</h1>
+              <button onClick={this.toggleModal}>
+                +
+              </button>
+            </header>
+            <h1 className="feed-title">
+              daily feed
+            </h1>
+          </section>
         </section>
-        <section className="daily-feed">
+
+        <section>
           <Modal show={this.state.isOpen}
             onClose={this.toggleModal}>
             <MemeForm />

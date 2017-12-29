@@ -4,6 +4,8 @@
 
 .App {
   text-align: center;
+  z-index: -1;
+
 }
 
 .topper {
@@ -12,7 +14,7 @@
   padding: 15px;
   font-size: 30px;
   background-color: lightgrey;
-  min-height: 50%;
+  min-height: 150px;
 }
 
 .App-header {
@@ -87,7 +89,7 @@ article {
 }
 
 .meme-container {
-  z-index: -1;
+  padding-top: 335px;
 }
 
 .modal {
