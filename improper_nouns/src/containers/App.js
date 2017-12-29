@@ -1,10 +1,7 @@
-import ReactDOM from 'react-dom';
 import React, { Component } from 'react';
 import Memes from './Memes';
 import MemeForm from './MemeForm';
-
 import Modal from './Modal';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import '../App.css';
 
 
@@ -13,30 +10,37 @@ class App extends Component {
   super(props);
 
   this.state = { isOpen: false };
-}
+  }
 
-toggleModal = () => {
-  this.setState({
-    isOpen: !this.state.isOpen
-  });
-}
+  toggleModal = () => {
+    this.setState({
+      isOpen: !this.state.isOpen
+    });
+  }
+
+  componentWillMount = () => {
+    let articleWidth = window.innerWidth/3;
+    return articleWidth;
+  }
+
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1>Welcome to Improper Nouns</h1>
-              <button onClick={this.toggleModal}>
+        <section className="topper">
+          <header className="App-header">
+            <h1>Welcome to Improper Nouns</h1>
+            <button onClick={this.toggleModal}>
               +
-              </button>
-           <Modal show={this.state.isOpen}
-             onClose={this.toggleModal}>
-             <MemeForm />
-           </Modal>
-        </header>
-        <div className="daily-feed">
+            </button>
+          </header>
+        </section>
+        <section className="daily-feed">
+          <Modal show={this.state.isOpen}
+            onClose={this.toggleModal}>
+            <MemeForm />
+          </Modal>
           <Memes />
-
-        </div>
+        </section>
       </div>
     );
   }

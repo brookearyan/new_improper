@@ -1,9 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
-
-
 
 class Modal extends React.Component {
   render() {

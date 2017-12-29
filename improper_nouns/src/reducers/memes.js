@@ -5,8 +5,7 @@ export default (state = [], action) => {
       return action.memes;
 
     case 'CREATE_MEME_SUCCESS':
-      return state.concat(action.meme);
-
+      return [...state, action.meme]
     default:
       return state;
   }

@@ -23,64 +23,57 @@ class MemeForm extends Component {
     const { id, alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
-      <div>
-      share your current
+      <div className="modal-content">
+        <p>share your current</p>
         <form onSubmit={this.handleOnSubmit}>
-          <div>
-            <label htmlFor="alias">alias:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="alias"
-              value={alias}
-            />
+        <div>
+          <label htmlFor="alias">alias:</label><br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="alias"
+            value={alias}
+          />
+        </div>
+        <br />
+        <div>
+          <label htmlFor="one">your five nouns...</label><br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="one"
+            value={one}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="two"
+            value={two}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="three"
+            value={three}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="four"
+            value={four}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="five"
+            value={five}
+          />
           </div>
-          <div>
-            <label htmlFor="one">1:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="one"
-              value={one}
-            />
-          </div>
-          <div>
-            <label htmlFor="two">2:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="two"
-              value={two}
-            />
-          </div>
-          <div>
-            <label htmlFor="three">3:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="three"
-              value={three}
-            />
-          </div>
-          <div>
-            <label htmlFor="four">4:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="four"
-              value={four}
-            />
-          </div>
-          <div>
-            <label htmlFor="length">5:</label>
-            <input
-              type="text"
-              onChange={this.handleOnChange}
-              name="five"
-              value={five}
-            />
-          </div>
-           <button type="submit">share</button>
+           <button id="share-button" type="submit">share</button>
         </form>
       </div>
     )

@@ -2,7 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 
-const MemeArticle = ({ match, surfboard }) => (
+const MemeArticle = ({ match, meme }) => (
   <Link to={`${match.url}/${meme.id}`}>
     <article key={meme.id}>
       <h3>by, {meme.alias}</h3>
