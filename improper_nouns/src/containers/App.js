@@ -4,13 +4,12 @@ import MemeForm from './MemeForm'
 import Modal from '../components/Modal'
 import '../App.css'
 
-
 // stateful parent Component that sets state
-
 //----maybe separate modal below
 
 export class App extends Component {
   constructor(props) {
+
   super(props);
   this.state = { isOpen: false };
   this.toggleModal = this.toggleModal.bind(this);
@@ -24,21 +23,23 @@ export class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <section>
-          <section className="topper">
-            <header className="App-header">
-              <h1 className="app-title">
-                improper nouns
-              </h1>
+      <div className="app">
+        <section className="topper">
+          <div className="app-header">
+            <div className="add-button">
               <button onClick={this.toggleModal}>
                 +
               </button>
-            </header>
-            <h1 className="feed-title">
-              daily feed
+            </div>
+            <h1 className="app-title">
+              improper nouns
             </h1>
-          </section>
+            <div className="space-saver-header">
+            </div>
+          </div>
+          <h1 className="feed-title">
+            daily feed
+          </h1>
         </section>
 
         <section>

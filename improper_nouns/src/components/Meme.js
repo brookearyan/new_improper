@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { dateFormatter } from '../components/dateFormatter'
 
-
 //stateless presentational component
 //renders JSX for Memes
 
@@ -21,8 +20,6 @@ export const Meme = ({ meme }) => {
     </article>
   );
 }
-
-// 2017-12-11T19:25:34.537Z
 
 const mapStateToProps = (state, ownProps) => {
   return {

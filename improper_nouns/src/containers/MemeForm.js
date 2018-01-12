@@ -89,7 +89,7 @@ class MemeForm extends Component {
                 value={five}
               />
               </div>
-               <button id="share-button" type="submit">share</button>
+               <button className="share-button" type="submit">share</button>
             </section>
         </form>
       </div>
