@@ -9,6 +9,7 @@ export const Meme = ({ meme }) => {
     <article className="memes" key={meme.id}>
       <div>
         <h3>by, {meme.alias}</h3>
+        <h6>{meme.created_at}</h6>
       </div>
       <p>{meme.one}</p>
       <p>{meme.two}</p>

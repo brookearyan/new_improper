@@ -1,21 +1,22 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { updateMemeFormData } from '../actions/memeForm';
-import { createMeme } from '../actions/memes';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { updateMemeFormData } from '../actions/memeForm'
+import { createMeme } from '../actions/memes'
 
 
 //stateless functional Component
 
 class MemeForm extends Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       alias: '',
       one: '',
       two: '',
       three: '',
       four: '',
-      five: ''
+      five: '',
+      created_at: ''
     }
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnSubmit = this.handleOnSubmit.bind(this);

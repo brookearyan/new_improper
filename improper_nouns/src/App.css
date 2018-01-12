@@ -57,9 +57,9 @@ h3 {
 }
 
 p {
-  font-size: 25px;
+  font-size: 35px;
   font-family: Permanent Marker;
-
+  margin: 0;
 }
 
 .modal-content {
@@ -88,7 +88,7 @@ article {
   background: lightgrey;
   height: auto;
   width: 33%;
-  height: 400px;
+  height: 450px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 33%;

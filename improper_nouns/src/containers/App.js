@@ -1,17 +1,15 @@
-import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import Memes from './Memes';
-import MemeForm from './MemeForm';
-import Modal from '../components/Modal';
-import '../App.css';
+import React, { Component } from 'react'
+import Memes from './Memes'
+import MemeForm from './MemeForm'
+import Modal from '../components/Modal'
+import '../App.css'
 
 
 // stateful parent Component that sets state
 
 //----maybe separate modal below
 
-class App extends Component {
+export class App extends Component {
   constructor(props) {
   super(props);
   this.state = { isOpen: false };

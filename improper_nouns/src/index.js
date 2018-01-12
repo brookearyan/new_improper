@@ -1,13 +1,19 @@
 
-import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Loadable from 'react-loadable';
+import React from 'react'
+import ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import store from './store.js'
+import registerServiceWorker from './registerServiceWorker'
+import { Root } from './components/Root'
 
-import store from './store.js';
-import registerServiceWorker from './registerServiceWorker';
-import App from './containers/App';
+ReactDOM.render(
+  <Provider store={store}>
+    <Root />
+  </Provider>,
+  document.getElementById('root')
+);
+
+registerServiceWorker();
 
 // Parent Component that renders ReactDOM
 // passes stateless Components store data
@@ -44,14 +50,3 @@ import App from './containers/App';
 // Instead of rendering HTML-like JSX, the component
 // should render another component. It should be
 // that component's job to render HTML-like JSX.
-
-ReactDOM.render(
-  <Provider store={store}>
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
-  </Provider>,
-  document.getElementById('root')
-);
-
-registerServiceWorker();

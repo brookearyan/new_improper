@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 //stateless presentational Component
 //renders only JSX
 
-class Modal extends React.Component {
+export class Modal extends React.Component {
   render() {
     if(!this.props.show) {
       return null;
@@ -22,13 +22,13 @@ class Modal extends React.Component {
     return (
       <div className="backdrop" style={backdropStyle}>
         <div className="modal">
-        <div className="close-button">
-          <button onClick={this.props.onClose}>
-            x
-          </button>
-        </div>
-          {this.props.children}
-        </div>
+          <div className="close-button">
+            <button onClick={this.props.onClose}>
+              x
+            </button>
+          </div>
+            {this.props.children}
+          </div>
       </div>
     );
   }
