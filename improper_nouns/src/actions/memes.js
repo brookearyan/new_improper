@@ -1,5 +1,7 @@
 import { resetMemeForm } from './memeForm';
 
+//async functions
+
 const API_URL = 'http://localhost:9393/api/v1';
 
 const setMemes = memes => {

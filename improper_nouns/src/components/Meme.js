@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-//presentational component
+//stateless presentational component
 //renders JSX for Memes
 
 export const Meme = ({ meme }) => {

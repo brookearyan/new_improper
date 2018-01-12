@@ -35,7 +35,6 @@ class MemeForm extends Component {
   }
 
   render() {
-    // eslint-disable-next-line
     const { id, alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
