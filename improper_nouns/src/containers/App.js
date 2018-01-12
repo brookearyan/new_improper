@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import Loadable from 'react-loadable';
 import Memes from './Memes';
 import MemeForm from './MemeForm';
 import Modal from '../components/Modal';
