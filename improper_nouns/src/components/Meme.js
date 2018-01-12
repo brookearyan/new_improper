@@ -20,6 +20,8 @@ export const Meme = ({ meme }) => {
   );
 }
 
+// 2017-12-11T19:25:34.537Z
+
 const mapStateToProps = (state, ownProps) => {
   return {
     meme: state.memes.find(meme => meme.id === ownProps.match.params.memeId)

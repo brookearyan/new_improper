@@ -16,7 +16,7 @@ class Memes extends Component {
   componentDidMount(){
     this.props.getMemes()
   }
-
+  
   render() {
     const memes = this.props.memes.map(meme => {
       return <Meme key={meme.id} meme={meme}/>
