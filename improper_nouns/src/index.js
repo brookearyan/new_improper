@@ -21,12 +21,12 @@ registerServiceWorker();
 // TASKS
 //-add constructors to classes & bind
 //-check proj requirements
-//-implement routes
 //-clean up code
 //-like button?
-//-separate presentational & func Components
-//-check for object literals, non bound handlers,
-////pieces doing too many things
+//XX-separate presentational & func Components
+//XX-check for object literals, non bound handlers,
+//XXpieces doing too many things
+//XX-implement routes
 
 
 // COMP VS CONTAINER________________________________
