@@ -54,6 +54,14 @@ button {
 
 h3 {
   font-size: 30px;
+  margin-bottom: 5px;
+}
+
+h6 {
+  font-size: 14px;
+  margin: 0;
+  margin-bottom: 5px;
+
 }
 
 p {
