@@ -22,7 +22,7 @@ class MemeForm extends Component {
   }
 
   render() {
-    const { id, alias, one, two, three, four, five } = this.props.memeFormData;
+    const { alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
       <div className="modal-content">

@@ -2,6 +2,11 @@
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
   z-index: -1;
@@ -28,9 +33,11 @@
 }
 
 .app-title {
-  margin: 50px;
+  margin: 20px;
+  font-size: 60px;
   font-weight: normal;
-
+  font-family: Parisienne;
+  color: black;
 }
 
 h1 {
@@ -39,13 +46,20 @@ h1 {
 
 button {
   font-size: 40px;
+  font-weight: 500;
   height: 60px;
   width: 60px;
   padding: 0px 7px 3px 7px;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 p {
-  margin: 20px 0px 10px 0px;
+  font-size: 25px;
+  font-family: Permanent Marker;
+
 }
 
 .modal-content {
@@ -74,13 +88,13 @@ article {
   background: lightgrey;
   height: auto;
   width: 33%;
-  height: 350px;
+  height: 400px;
   margin-top: 10px;
   margin-bottom: 10px;
   margin-left: 33%;
   margin-right: 33%;
   border-style: solid;
-  border-width: 1px;
+  border-width: 3px;
 }
 
 #share-button {

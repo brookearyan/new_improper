@@ -4,6 +4,7 @@ import MemeForm from './MemeForm';
 import Modal from './Modal';
 import '../App.css';
 
+
 // stateful parent Component that sets state
 
 //----maybe separate modal below
@@ -28,7 +29,9 @@ class App extends Component {
         <section>
           <section className="topper">
             <header className="App-header">
-              <h1 className="app-title">welcome to improper nouns</h1>
+              <h1 className="app-title">
+                improper nouns
+              </h1>
               <button onClick={this.toggleModal}>
                 +
               </button>
