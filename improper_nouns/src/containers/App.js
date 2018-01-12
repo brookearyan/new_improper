@@ -12,11 +12,11 @@ import '../App.css';
 class App extends Component {
   constructor(props) {
   super(props);
-
   this.state = { isOpen: false };
+  this.toggleModal = this.toggleModal.bind(this);
   }
 
-  toggleModal = () => {
+  toggleModal() {
     this.setState({
       isOpen: !this.state.isOpen
     });
