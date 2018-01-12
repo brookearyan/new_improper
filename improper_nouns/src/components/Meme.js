@@ -1,25 +1,18 @@
 import React from 'react';
-import { connect } from 'react-redux';
+//presentational component
+//renders JSX for Memes
 
-const Meme = ({ meme }) => {
+export const Meme = ({ meme }) => {
   return (
-    <div>
-      <article key={meme.id}>
+    <article className="memes" key={meme.id}>
+      <div>
         <h3>by, {meme.alias}</h3>
-        <p>{meme.one}</p>
-        <p>{meme.two}</p>
-        <p>{meme.three}</p>
-        <p>{meme.four}</p>
-        <p>{meme.five}</p>
-      </article>
-    </div>
+      </div>
+      <p>{meme.one}</p>
+      <p>{meme.two}</p>
+      <p>{meme.three}</p>
+      <p>{meme.four}</p>
+      <p>{meme.five}</p>
+    </article>
   );
 }
-
-const mapStateToProps = (state, ownProps) => {
-  return {
-    meme: state.memes.find(meme => meme.id == ownProps.match.params.memeId)
-  }
-}
-
-export default connect(mapStateToProps)(Meme);
