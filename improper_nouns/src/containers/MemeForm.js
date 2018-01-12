@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { updateMemeFormData } from '../actions/memeForm';
 import { createMeme } from '../actions/memes';
-import { MemeFormJSX } from '../components/MemeFormJSX'
 
 //stateless Component
-//connected to redux store, receives state updates & dispatch actions
-//does not render
 
+//----maybe divide JSX & logic below
 class MemeForm extends Component {
 
   handleOnChange = event => {
@@ -24,8 +22,62 @@ class MemeForm extends Component {
   }
 
   render() {
+    // eslint-disable-next-line
+    const { id, alias, one, two, three, four, five } = this.props.memeFormData;
+
     return (
-      <MemeForm />
+      <div className="modal-content">
+        <p>share your current</p>
+        <form onSubmit={this.handleOnSubmit}>
+        <div>
+          <label htmlFor="alias">one-time alias:</label><br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="alias"
+            value={alias}
+          />
+        </div>
+        <div>
+          <label htmlFor="one">your five nouns...</label><br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="one"
+            value={one}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="two"
+            value={two}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="three"
+            value={three}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="four"
+            value={four}
+          />
+          <br />
+          <input
+            type="text"
+            onChange={this.handleOnChange}
+            name="five"
+            value={five}
+          />
+          </div>
+           <button id="share-button" type="submit">share</button>
+        </form>
+      </div>
     )
   }
 }

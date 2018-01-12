@@ -8,7 +8,6 @@ import '../App.css';
 // stateful parent Component that sets state
 
 //----maybe separate modal below
-//----
 
 class App extends Component {
   constructor(props) {

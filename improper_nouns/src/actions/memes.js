@@ -39,7 +39,7 @@ export const createMeme = meme => {
       .then(meme => {
         dispatch(addMeme(meme))
         dispatch(resetMemeForm())
-      })
-      .catch(error => console.log(error))
+    })
+    .catch(error => console.log(error))
   }
 }

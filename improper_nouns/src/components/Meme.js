@@ -1,4 +1,6 @@
 import React from 'react';
+import { connect } from 'react-redux';
+
 //presentational component
 //renders JSX for Memes
 
@@ -16,3 +18,11 @@ export const Meme = ({ meme }) => {
     </article>
   );
 }
+
+const mapStateToProps = (state, ownProps) => {
+  return {
+    meme: state.memes.find(meme => meme.id === ownProps.match.params.memeId)
+  }
+}
+
+export default connect(mapStateToProps)(Meme);

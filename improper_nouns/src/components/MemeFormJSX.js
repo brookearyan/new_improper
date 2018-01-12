@@ -2,9 +2,8 @@ import React from 'react';
 
 //presentational component
 
-export class MemeFormJSX extends React.Component {
+export const MemeForm extends React.Component {
   render() {
-    const { alias, one, two, three, four, five } = this.props.memeFormData;
 
     return (
       <div className="modal-content">
@@ -16,7 +15,7 @@ export class MemeFormJSX extends React.Component {
             type="text"
             onChange={this.handleOnChange}
             name="alias"
-            value={alias}
+            value={this.props.alias}
           />
         </div>
         <div>
@@ -25,38 +24,38 @@ export class MemeFormJSX extends React.Component {
             type="text"
             onChange={this.handleOnChange}
             name="one"
-            value={one}
+            value={this.props.one}
           />
           <br />
           <input
             type="text"
             onChange={this.handleOnChange}
             name="two"
-            value={two}
+            value={this.props.two}
           />
           <br />
           <input
             type="text"
             onChange={this.handleOnChange}
             name="three"
-            value={three}
+            value={this.props.three}
           />
           <br />
           <input
             type="text"
             onChange={this.handleOnChange}
             name="four"
-            value={four}
+            value={this.props.four}
           />
           <br />
           <input
             type="text"
             onChange={this.handleOnChange}
             name="five"
-            value={five}
+            value={this.props.five}
           />
           </div>
-           <button id="share-button" type="submit">share</button>
+           <button onSubmit={this.handleOnSubmit} id="share-button" type="submit">share</button>
         </form>
       </div>
     )
