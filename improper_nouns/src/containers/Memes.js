@@ -17,12 +17,11 @@ class Memes extends Component {
 
   componentDidMount(){
     this.props.getMemes()
-    console.log(this.props)
   }
 
   render() {
     const memes = this.props.memes.map(meme => {
-      dateFormatter(meme)
+      // dateFormatter(meme)
       return <Meme key={meme.id} meme={meme}/>
     })
 

@@ -23,8 +23,10 @@ export const dateFormatter = (meme) => {
     let str_month = months[month]
     let new_date = str_month + " " + day + ", " + year
 
-    meme["created_at"] = new_date;
-    return meme["created_at"]
+    return new_date
 }
 
 export default dateFormatter;
+
+// meme["created_at"] = new_date;
+// return meme["created_at"]

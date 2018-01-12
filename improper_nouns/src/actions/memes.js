@@ -67,7 +67,6 @@ export const createMeme = meme => {
     })
       .then(response => response.json())
       .then(meme => {
-        dateFormatter(meme)
         dispatch(addMeme(meme))
         dispatch(resetMemeForm())
         console.log(meme)
