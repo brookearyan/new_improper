@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Memes from './Memes';
 import MemeForm from './MemeForm';
-import Modal from './Modal';
+import Modal from '../components/Modal';
 import '../App.css';
 
 

@@ -3,12 +3,16 @@ import { connect } from 'react-redux';
 import { updateMemeFormData } from '../actions/memeForm';
 import { createMeme } from '../actions/memes';
 
-//stateless Component
+//stateless functional Component
 
-//----maybe divide JSX & logic below
 class MemeForm extends Component {
+  constructor(props) {
+    super(props);
+    this.handleOnChange = this.handleOnChange.bind(this);
+    this.handleOnSubmit = this.handleOnSubmit.bind(this);
+  }
 
-  handleOnChange = event => {
+  handleOnChange(event) {
     const { name, value } = event.target;
     const currentMemeFormData = Object.assign({}, this.props.memeFormData, {
       [name]: value
@@ -16,7 +20,7 @@ class MemeForm extends Component {
     this.props.updateMemeFormData(currentMemeFormData)
   }
 
-  handleOnSubmit = event => {
+  handleOnSubmit(event) {
     event.preventDefault()
     this.props.createMeme(this.props.memeFormData)
   }

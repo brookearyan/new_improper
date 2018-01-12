@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { getMemes } from '../actions/memes';
 import { Meme } from '../components/Meme'
 
+// stateful functional
 class Memes extends Component {
   constructor(props) {
     super(props)
