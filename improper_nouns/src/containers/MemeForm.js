@@ -40,7 +40,7 @@ class MemeForm extends Component {
 
     return (
       <div className="modal-content">
-        <p>share your current</p>
+        <h4>share your current</h4>
         <form onSubmit={this.handleOnSubmit}>
           <section>
             <div>

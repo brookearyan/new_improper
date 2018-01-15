@@ -9,8 +9,8 @@ export const Meme = ({ meme }) => {
   return (
     <article className="memes" key={meme.id}>
       <div>
-        <h3>by, {meme.alias}</h3>
         <h6>{dateFormatter(meme)}</h6>
+        <h3>by, {meme.alias}</h3>
       </div>
       <p>{meme.one}</p>
       <p>{meme.two}</p>
