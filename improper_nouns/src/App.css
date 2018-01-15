@@ -26,6 +26,30 @@ button {
 /*-----welcome page-----*/
 h1 {
   font-family: 'Satisfy', cursive;
+  font-size: 50px;
+  text-align: center;
+}
+.enter-button {
+  font-family: Avenir Next;
+  font-size: 18px;
+  width: 15%;
+  margin-left: 45%;
+  margin-right: 45%;
+}
+.welcome-modal {
+  background-color: white;
+  padding: 40px;
+  width: 60%;
+  height: 450px;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.welcome {
+
+}
+.welcome-message{
+  font-family: Avenir Next;
+  font-size: 14px;
 }
 /*-----*/
 

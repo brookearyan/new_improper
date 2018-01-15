@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { updateMemeFormData } from '../actions/memeForm'
 import { createMeme } from '../actions/memes'
 
-
 //stateless functional Component
 
 class MemeForm extends Component {

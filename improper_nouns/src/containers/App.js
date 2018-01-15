@@ -9,10 +9,9 @@ import '../App.css'
 
 export class App extends Component {
   constructor(props) {
-
-  super(props);
-  this.state = { isOpen: false };
-  this.toggleModal = this.toggleModal.bind(this);
+    super(props);
+    this.state = { isOpen: false };
+    this.toggleModal = this.toggleModal.bind(this);
   }
 
   toggleModal() {
