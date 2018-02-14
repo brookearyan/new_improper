@@ -1,4 +1,5 @@
 // stateless component to format date in memes
+
 export const dateFormatter = (meme) => {
     const months = {
       "01": "January",

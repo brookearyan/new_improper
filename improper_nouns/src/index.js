@@ -18,16 +18,6 @@ registerServiceWorker();
 // Parent Component that renders ReactDOM
 // passes stateless Components store data
 
-// TASKS
-//-add constructors to classes & bind
-//-check proj requirements
-//-clean up code
-//-like button?
-//XX-separate presentational & func Components
-//XX-check for object literals, non bound handlers,
-//XXpieces doing too many things
-//XX-implement routes
-
 
 // COMP VS CONTAINER________________________________
 // Component is part of the React API.

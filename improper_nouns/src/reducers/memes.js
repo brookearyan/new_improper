@@ -6,6 +6,7 @@ export default (state = [], action) => {
 
     case 'CREATE_MEME_SUCCESS':
       return [...state, action.meme]
+
     default:
       return state;
   }

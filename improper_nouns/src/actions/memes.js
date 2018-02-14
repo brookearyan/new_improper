@@ -28,7 +28,7 @@ export const getMemes = () => {
 }
 
 export const createMeme = meme => {
-  return dispatch => {
+  return (dispatch) => {
     return fetch(`${API_URL}/memes`, {
       method: "POST",
       headers: {

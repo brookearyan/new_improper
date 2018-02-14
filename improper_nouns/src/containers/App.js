@@ -2,21 +2,28 @@ import React, { Component } from 'react'
 import Memes from './Memes'
 import MemeForm from './MemeForm'
 import Modal from '../components/Modal'
+import Welcome from '../components/Welcome'
 import '../App.css'
 
 // stateful parent Component that sets state
-//----maybe separate modal below
 
 export class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { isOpen: false };
+    this.state = { isOpen: false, welcomeOpen: true };
     this.toggleModal = this.toggleModal.bind(this);
+    this.toggleWelcomeBox = this.toggleWelcomeBox.bind(this);
   }
 
   toggleModal() {
     this.setState({
       isOpen: !this.state.isOpen
+    });
+  }
+
+  toggleWelcomeBox() {
+    this.setState({
+        welcomeOpen: !this.state.welcomeOpen
     });
   }
 
@@ -42,6 +49,9 @@ export class App extends Component {
         </section>
 
         <section>
+          <Welcome show={this.state.welcomeOpen}
+            onClose={this.toggleWelcomeBox}>
+          </Welcome>
           <Modal show={this.state.isOpen}
             onClose={this.toggleModal}>
             <MemeForm />

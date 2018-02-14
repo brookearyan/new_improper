@@ -6,19 +6,10 @@ import { Modal } from './Modal'
 
 export const Root = () => (
   <Router>
-    <div>
       <div>
         <Route path="/" component={App}/>
       </div>
-
-      <div>
-        <Route path="/add" component={Modal}/>
-      </div>
-    </div>
   </Router>
 )
-// <div>
-//   <Route path="/" component={Welcome}/>
-// </div>
 
-//above connects welcome modal 
+//above connects welcome modal

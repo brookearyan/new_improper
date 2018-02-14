@@ -219,3 +219,17 @@ input {
   width: 175px;
 }
 /*-----*/
+
+/*-----like button-----*/
+.heart {
+  width: 40px;
+  height: 40px;
+  float: right;
+  overflow: auto;
+  padding: 5px;
+}
+.heart img{
+  width: 50%;
+  margin-bottom: 18px;
+}
+/*-----*/
