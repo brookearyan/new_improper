@@ -15,32 +15,25 @@ export class LikeButton extends React.Component {
     });
   }
 
+
   render() {
-    const likedStyle = {
-      color: 'red'
-    }
-    const initialStyle = {
-      color: 'black'
-    }
-    const style = this.state.liked ? initialStyle : likedStyle ;
-    return (
-      <div className="likes">
-        <button className="heart" onClick={this.handleClick}>
-          <img src="https://image.flaticon.com/icons/svg/60/60993.svg"/>
-        </button>
-      </div>
-    );
+    const color = this.state.liked? "liked" : "initial";
+    console.log(color);
+      return (
+        <div className="likes">
+          <button className="heart" onClick={this.handleClick}>
+            <div className={color}>
+              <img src="https://image.flaticon.com/icons/svg/60/60993.svg"/>
+            </div>
+          </button>
+        </div>
+    )
   }
 }
 
 export default LikeButton;
 
-// const likedStyle = {
-//   color: 'red'
-// }
-// const initialStyle = {
-//   color: 'black'
-// }
+
 // const text = this.state.liked ? 'liked' : 'haven\'t liked';
 // const label = this.state.liked ? 'Unlike' : 'Like'
 // return (
