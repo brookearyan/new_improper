@@ -1,10 +1,16 @@
-import React, { Component } from 'react';
 
+import React, { Component } from 'react'
+import PropTypes from 'prop-types'
+import { toggleWelcomeBox } from '../containers/App'
 //stateless presentational component
 //renders welcome page
 
 export class Welcome extends Component {
   render() {
+    if(!this.props.show) {
+      return null;
+    }
+
     const backdropStyle = {
       position: 'fixed',
       top: 0,
@@ -29,7 +35,8 @@ export class Welcome extends Component {
            please reallocate your social media time to personal growth endeavors.
            <br /><br />
           </p>
-          <button className="enter-button">
+          <button onClick={this.props.onClose}
+            className="enter-button">
             enter
           </button>
         </div>
@@ -37,21 +44,11 @@ export class Welcome extends Component {
     )
   }
 }
-// this.toggleWelcomeBox.bind(this);
 
+Welcome.propTypes = {
+  onClose: PropTypes.func,
+  show: PropTypes.bool,
+  children: PropTypes.node
+};
 
-// toggleWelcomeBox() {
-//   this.setState({
-//     welcomeOpen: !this.state.welcomeOpen
-//   });
-// }
-// Welcome.propTypes = {
-//   onClose: PropTypes.func.isRequired,
-//   show: PropTypes.bool,
-//   children: PropTypes.node
-// };
-// constructor(props) {
-//   super(props);
-//   this.state = { welcomeOpen: true };
-// }
 export default Welcome;
