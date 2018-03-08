@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { getMemes } from '../actions/memes'
+import { getMemes, addLike } from '../actions/memes'
 import { Meme } from '../components/Meme'
 import { dateFormatter } from '../components/dateFormatter'
 
@@ -19,9 +19,13 @@ class Memes extends Component {
     this.props.getMemes()
   }
 
+  handleClick(event) {
+    event.preventDefault();
+    console.log('clicked')
+  }
+
   render() {
     const memes = this.props.memes.map(meme => {
-      // dateFormatter(meme)
       return <Meme key={meme.id} meme={meme}/>
     })
 

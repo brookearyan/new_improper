@@ -1,13 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { dateFormatter } from '../components/dateFormatter'
-
+import { LikeButton } from '../containers/LikeButton'
 //stateless presentational component
 //renders JSX for Memes
 
 export const Meme = ({ meme }) => {
   return (
     <article className="memes" key={meme.id}>
+      <LikeButton key={meme.id}/>
       <div>
         <h6>{dateFormatter(meme)}</h6>
         <h3>by, {meme.alias}</h3>

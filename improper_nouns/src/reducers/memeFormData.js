@@ -6,7 +6,8 @@ const initialState = {
   three: '',
   four: '',
   five: '',
-  created_at: ''
+  created_at: '',
+  likes: 0
 }
 
 export default (state = initialState, action) => {

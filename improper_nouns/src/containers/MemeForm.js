@@ -16,7 +16,8 @@ class MemeForm extends Component {
       three: '',
       four: '',
       five: '',
-      created_at: ''
+      created_at: '',
+      likes: 0
     }
     this.handleOnChange = this.handleOnChange.bind(this);
     this.handleOnSubmit = this.handleOnSubmit.bind(this);
@@ -24,17 +25,22 @@ class MemeForm extends Component {
 
   handleOnChange(event) {
     const { name, value } = event.target;
+    //sets entered data to a const
+    console.log(this.props)
     const currentMemeFormData = Object.assign({}, this.props.memeFormData, {
       [name]: value
     })
+    //uses Obj assign to copy all values in target obj & set to const
     this.props.updateMemeFormData(currentMemeFormData)
   }
-
+    //calls updateMemeFormData action on that data
   handleOnSubmit(event) {
     event.preventDefault()
+    console.log(this.props)
     this.props.createMeme(this.props.memeFormData)
   }
 
+  //calls createMeme action using new props
   render() {
     const { id, alias, one, two, three, four, five } = this.props.memeFormData;
 
