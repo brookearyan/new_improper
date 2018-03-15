@@ -1,4 +1,3 @@
-import { setMemes } from './memes'
 
 const API_URL = 'http://localhost:9393/api/v1';
 
@@ -22,7 +21,7 @@ export const createLike = meme => {
     .then(response => response.json())
     .then(meme => {
       dispatch(addLike(meme))
-      dispatch(setMemes(meme))
+      console.log(meme)
     })
   }
 }
